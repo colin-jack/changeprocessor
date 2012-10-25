@@ -20,7 +20,7 @@ var updated = {
 }
 
 var allDone = function() {
-    console.log("All done.");
+    console.log("all done");
 }
 
 personChangeProcessor(original, updated, allDone)

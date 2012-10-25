@@ -1,14 +1,14 @@
-var changeProcessor = require('./../changeProcessor')
+var changeProcessor = require('./../lib/changeProcessor')
 
 module.exports = changeProcessor(function() {
     this.onChange("name", function(done) {
-        console.log("name changed");
+        console.log("changed - name");
         
         done();
     });
 
     this.onChange("address.streetOne", function(done) {
-       console.log("address.streetOne");
+       console.log("changed - address.streetOne");
         
         done(); 
     })
