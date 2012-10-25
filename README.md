@@ -2,8 +2,6 @@ change processor (node.js)
 ==========
 Makes it easy to compare objects and based on the differences decide what code to run. 
 
-The main place this would prove useful would be entry points to the system, for example comparing the body of an HTTP PUT to the current representation and deciding what action to take (e.g. send a notification message, trigger an authorisation process).
-
 ### Sample
 #####JavaScript
 ```js
@@ -11,6 +9,8 @@ var changeProcessor = require('./../lib/changeProcessor')
 
 var personChangeProcessor = changeProcessor(function() {
     this.onChange("name", function(done) {
+        // NOTE - Here we might do something like send a message, trigger an authorisation process, ensure further
+        // updates are performed....
         console.log("changed - name");
         
         done();
