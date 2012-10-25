@@ -9,8 +9,7 @@ var changeProcessor = require('./../lib/changeProcessor')
 
 var personChangeProcessor = changeProcessor(function() {
     this.onChange("name", function(done) {
-        // NOTE - Here we might do something like send a message, trigger an authorisation process, ensure further
-        // updates are performed....
+        // NOTE - Here we might do something like send a message, trigger an authorisation process...
         console.log("changed - name");
         
         done();
