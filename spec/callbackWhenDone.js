@@ -13,8 +13,8 @@ describe("callback when done", function() {
         updated.name = "salamander";
 
         var logChanges = changeProcessor(function() {
-            this.onChange("name", function(done) { setTimeout(done, 1); timeNameChange = new Date(); });
-            this.onChange("age", function(done) { setTimeout(done, 1); timeAgeChange = new Date(); });
+            this.onChange("name", function(done) { setTimeout(done, 3); timeNameChange = new Date(); });
+            this.onChange("age", function(done) { setTimeout(done, 3); timeAgeChange = new Date(); });
         });
 
         var totallyDone = function() {
@@ -30,7 +30,7 @@ describe("callback when done", function() {
             assert.isDefined(timeTotallyComplete);
         });
 
-        it("should callback only after it is completely done done", function() {
+        it("should callback only after it is completely done", function() {
             assert.isTrue(timeTotallyComplete.getMilliseconds() > timeAgeChange.getMilliseconds());
             assert.isTrue(timeTotallyComplete.getMilliseconds() > timeNameChange.getMilliseconds());
         });
