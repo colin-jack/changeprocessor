@@ -47,7 +47,7 @@ changed - name
 changed - name.first
 all done
 ```
-
+Note even though we only changed ```name.first``` the event for ```name``` was raised too.
 ### Examples
 The project comes with examples in the examples directory:
 
