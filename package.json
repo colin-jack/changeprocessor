@@ -1,0 +1,47 @@
+{
+  "version": "0.1.0",
+  
+  "name": "changeprocessor",
+  
+  "preferGlobal": "false",
+
+  "description": "Compares objects and runs appropriate code for each change found (node.js).",
+  
+  "main": "index",
+
+  "author": {
+    "name": "Colin Jack"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colin-jack/changeprocessor.git"
+  },
+
+  "dependencies": {
+    "underscore": "*",
+    "underscore.string": "*",
+    "objectcompare" : "*"
+  },
+
+  "scripts": {
+    "test": "mocha -R spec spec/testFixture spec/ -w -G --recursive"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "require-namespace" : "*"
+  },
+
+  "_npmUser": {
+    "name": "colin_jack",
+    "email": "colin.jack@gmail.com"
+  },
+
+  "license": "MIT",
+  
+  "engines": {
+    "node": ">=0.6"
+  }
+}
